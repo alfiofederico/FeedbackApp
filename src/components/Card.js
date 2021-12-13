@@ -1,16 +1,13 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
-import { FaLightbulb } from "react-icons/fa";
+function Card({children}) {
 
-
-function Card({children, dark}) {
- const addclass = () => {
-   document.querySelector("#changeclass").classList.toggle("dark");
- }; 
+  const { mode } = useContext(ThemeContext)
+  
 
   return (
-    <div className={`card ${dark && "dark"}`} id="changeclass">
-      <FaLightbulb size={30} onClick={addclass} />
-
+    <div className={`card ${mode}`} >
       {children}
     </div>
   );

@@ -46,6 +46,11 @@ header {
   color: #fff;
 }
 
+.light {
+   background-color: #fff;
+  color: #333;
+}
+
 .card h2 {
   font-size: 22px;
   font-weight: 600;
