@@ -5,8 +5,10 @@ import FeedbackList from './components/FeedbackList';
 import FeedbackStats from './components/FeedbackStats';
 import FeedbackForm from './components/FeedbackForm';
 import About from './pages/About';
-import AboutIcon from './components/AboutIcon';
 import { FeedbackProvider } from './context/FeedbackContext';
+import AboutIcon from './components/AboutIcon';
+import Theme from './components/Theme';
+
 
 export default function App() {
   return (
@@ -14,14 +16,16 @@ export default function App() {
       <FeedbackProvider>
         <Router>
           <Header />
+
           <div className="container">
             <Route exact path="/">
-              <FeedbackForm  />
-              <FeedbackStats />
-              <FeedbackList />
+             
+                <FeedbackForm />
+                <FeedbackStats />
+                <FeedbackList />
+              <Theme />
             </Route>
             <Route path="/about" component={About} />
-
             <AboutIcon />
           </div>
         </Router>

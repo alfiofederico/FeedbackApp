@@ -32,7 +32,7 @@ header {
   margin-bottom: 30px;
 }
 
-.card {
+.card{
   background-color: #fff;
   color: #333;
   border-radius: 15px;
@@ -41,7 +41,7 @@ header {
   position: relative;
 }
 
-.card.reverse {
+.card.dark {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
 }
@@ -107,7 +107,7 @@ header {
   padding: 8px 10px;
   border-radius: 8px;
 }
-input.reverse {
+/* input.reverse {
   display: flex;
   flex-direction: row;
   border: 1px solid rgb(31, 10, 10);
@@ -115,7 +115,7 @@ input.reverse {
   border-radius: 8px;
   background-color:rgb(8, 6, 6)!important;
   color: #ccc;
-}
+} */
 
 input {
   flex-grow: 2;
@@ -209,6 +209,18 @@ input:focus {
 
 .about-link a {
   color: #fff;
+}
+
+.mode {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: rgb(201, 195, 195);
+  cursor: pointer;
+}
+
+.mode:hover {
+  color: #ff6a95;
 }
 
 a:visited{

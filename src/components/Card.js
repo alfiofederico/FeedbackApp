@@ -1,13 +1,15 @@
-function Card({children, reverse}) {
+function Card({children, dark}) {
   return (
-    <div className={`card ${reverse && 'reverse'}`}>
-      {children}
-    </div>
-  )
+      <div className={`card ${dark && "dark"}`}>
+         
+        {children}
+        </div>
+  
+  );
 }
 
 Card.defaultProps = {
-  reverse: false,
+  dark: false,
 }
 
 export default Card
