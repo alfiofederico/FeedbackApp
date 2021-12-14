@@ -22,7 +22,7 @@ export default function App() {
       <>
         <FeedbackProvider>
           <Router>
-            <Header  />
+            <Header />
 
             <div className="container">
               <Route exact path="/">
@@ -33,6 +33,7 @@ export default function App() {
               </Route>
               <Route path="/about" component={About} />
               <AboutIcon />
+              <Theme />
             </div>
           </Router>
         </FeedbackProvider>
