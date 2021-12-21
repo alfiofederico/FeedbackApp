@@ -32,8 +32,11 @@ export const FeedbackProvider = ({children}) => {
     const doc = newFeedback
 
     projectFirestore.collection('feedbacks').add(doc)
+
+
     
     setFeedback([newFeedback, ...feedback]);
+  
     };
 
    const deleteFeedback = (id) => {
@@ -42,12 +45,18 @@ export const FeedbackProvider = ({children}) => {
       projectFirestore.collection('feedbacks').doc(id).delete()
        setFeedback(feedback.filter((item) => item.id !== id));
      }
+
    };
 
 
    const updateFeedback = (id, updItem) => {
      projectFirestore.collection("feedbacks").doc(id).update(updItem);
       setFeedback(feedback.map((item) => (item.id === id ?{...item, ...updItem } : item )))
+         setFeedbackEdit({
+           item:{},
+           edit: false,
+         });
+      
    }
 
    const editFeedback = (item) =>{
@@ -55,6 +64,7 @@ export const FeedbackProvider = ({children}) => {
        item,
        edit:true
      })
+       
    }
   return <FeedbackContext.Provider value={{
     feedback,
